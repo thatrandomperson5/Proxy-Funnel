@@ -1,7 +1,7 @@
 const caller = document.getElementById("jsproxyfunnel");
 const cfigPath = caller.dataset.cfig;
 console.log(cfigPath);
-import {configDatafile} from cfigPath
+import configDatafile from cfigPath
 const configData = JSON.stringify(configDatafile);
 function objToStrMap(obj) {
   let strMap = new Map();
