@@ -1,0 +1,5 @@
+{ "localize": true,
+ "append": "/path",
+ "Fappend": "/path/",
+ "#comment": "Fappend only works if localize is true"
+}
