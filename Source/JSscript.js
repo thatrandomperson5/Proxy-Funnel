@@ -14,7 +14,7 @@ const config = objToStrMap(JSON.parse(configData));
 const appendFront = config.get("Fappend")
 const append = config.get("append")
 const localQ = config.get("localize")
-
+console.log(localQ)
 const callback = function(mutationList, observer) {
 
   for (var mutation of mutationList) {
