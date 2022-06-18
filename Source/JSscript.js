@@ -1,5 +1,5 @@
 const caller = document.getElementById("jsproxyfunnel");
-const cfig = caller.dataset.cfig;
+const cfig = JSON.parse(caller.dataset.cfig);
 
 const configData = JSON.stringify(cfig);
 function objToStrMap(obj) {
