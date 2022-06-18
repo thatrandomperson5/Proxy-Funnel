@@ -62,7 +62,7 @@ const callback = function(mutationList, observer) {
         }
       }
     }
-  }
+  
 };
 const evnconfig = {
   childList: true,
