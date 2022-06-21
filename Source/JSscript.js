@@ -41,7 +41,7 @@ const callback = function(mutationList, observer) {
       }
     }
    if (mutation.type === 'attributes') {
-      var added = mutation.addedNodes
+      var added = mutation.target
       for (var node of added) {
         if (node.src != undefined) {
           var newSRC = node.src
@@ -50,7 +50,7 @@ const callback = function(mutationList, observer) {
             newSRC = newSRC.replace("http://", "h§@")
             newSRC = newSRC.split("/")
             newSRC = newSRC.slice(1, newSRC.length).join("/")
-            console.log(newSRC)
+            console.log('attrs'+newSRC)
             if (appendFront != "") {
               newSRC = appendFront + newSRC + append
             }
@@ -68,6 +68,7 @@ const evnconfig = {
   childList: true,
   subtree: true,
   attributes: true,
+  attributeFilter: ['src','href'],
 };
 const observer = new MutationObserver(callback);
 observer.observe(document.body, evnconfig);
