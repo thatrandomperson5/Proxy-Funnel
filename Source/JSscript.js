@@ -42,8 +42,8 @@ const callback = function(mutationList, observer) {
     }
    if (mutation.type === 'attributes') {
       var added = mutation.target
-      for (var node of added) {
-        if (node.src != undefined) {
+      var node = added
+      if (node.src != undefined) {
           var newSRC = node.src
           if (localQ == true) {
             newSRC = newSRC.replace("https://", "s§@")
@@ -59,7 +59,7 @@ const callback = function(mutationList, observer) {
           console.log(newSRC)
           node.src = newSRC
 
-        }
+        
       }
     }
   }
